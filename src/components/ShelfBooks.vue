@@ -26,7 +26,7 @@
           <div class="text-right">
             <!-- TODO: 以下のb-buttonをクリックしたときに、カスタムイベントを発行する -->
             <!-- イベント名は 'delete-book' としてください -->
-            <b-button variant="outline-danger">
+            <b-button variant="outline-danger" @click="onDeleteBook">
               <b-icon-trash></b-icon-trash>
               削除
             </b-button>
@@ -60,6 +60,12 @@ export default {
     books: {
       type: Array,
       required: true,
+    },
+  },
+  methods: {
+    onDeleteBook(e) {
+      console.log(e);
+      this.$emit('delete-book');
     },
   },
 };

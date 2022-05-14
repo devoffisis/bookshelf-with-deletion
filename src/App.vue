@@ -3,7 +3,7 @@
     <shelf-header @add-book="onAddBook"></shelf-header>
     <shelf-message></shelf-message>
     <!-- TODO: ShelfBooksコンポーネントからdelete-bookイベントが発行されたら、onDeleteBookメソッドが呼び出されるようにする -->
-    <shelf-books :books="books"></shelf-books>
+    <shelf-books :books="books" @delete-book="onDeleteBook"></shelf-books>
   </div>
 </template>
 
